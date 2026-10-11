@@ -163,10 +163,17 @@ section{padding:56px 0 8px}
 .off{font-size:12px;color:var(--muted);margin-top:8px}
 footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 40px;color:var(--muted);font-size:13px}
 footer a{color:var(--blue)}
+.night-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;padding-bottom:10px}
+.nightb{position:relative;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--pink);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.nightb .ck{position:absolute;top:14px;right:14px}
+.nightb h4{font-size:15.5px;margin:7px 34px 6px 0}
+.n-hours{font-size:12.5px;color:var(--amber);font-weight:700}
+.n-intro{font-size:13px;color:var(--muted);margin-top:6px}
+.nightb.done{opacity:.55}.nightb.done h4{text-decoration:line-through}
 @media(max-width:920px){.info-grid{grid-template-columns:1fr 1fr}.rec-grid,.rain-grid{grid-template-columns:1fr 1fr}.prep-list{grid-template-columns:1fr 1fr}.tnav{display:none}}
 @media(max-width:640px){
 .tnav{display:none}
-.info-grid,.rec-grid,.rain-grid{grid-template-columns:1fr}
+.info-grid,.rec-grid,.rain-grid,.night-grid{grid-template-columns:1fr}
 .dept-grid{grid-template-columns:1fr}
 .tl{grid-template-columns:24px 1fr}.tl-body{grid-column:2}
 .tl-time{grid-column:2;order:-1;padding-top:0}
@@ -178,7 +185,7 @@ section{padding:40px 0 6px}
 }</style></head><body>
 <nav class="topbar"><div class="container">
 <span class="brand">釜山跨年 <span class="kr">부산</span> 2027</span>
-<nav class="tnav"><a href="#info">資訊</a><a href="#prep">行前</a><a href="#d1">行程</a><a href="#recs">備選</a><a href="#rain">雨備</a></nav>
+<nav class="tnav"><a href="#info">資訊</a><a href="#prep">行前</a><a href="#d1">行程</a><a href="#night">夜店</a><a href="#recs">備選</a><a href="#rain">雨備</a></nav>
 <span class="chipstat" id="chip">✓ 0 / 0</span>
 <button id="theme">☾</button></div></nav>
 <header class="hero">
@@ -215,7 +222,7 @@ section{padding:40px 0 6px}
 <a class="mb gmap" href="https://maps.google.com?q=Busan+station+City+Hotel,+294+Jungang-daero,+Dong-gu,+Busan,+%E5%8D%97%E9%9F%93&amp;ftid=0x3568ebdb45882bcb:0x1bf96db91fdb2da&amp;entry=gps" target="_blank" rel="noopener">Google 地圖 ↗</a></div></div>
 <div class="panel"><h3>👥 同行</h3>
 <p class="trav">CHIH WEI CHEN、PO HAO CHEN、HAI LIN</p>
-<p class="hotel-line">聯絡人：Chih Wei Chen｜+886 0972-576-616｜willwillwell@gmail.com</p></div>
+<p class="hotel-line">聯絡人：Chih Wei Chen｜+886 0972-576-616｜<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5e2937323229373232293b32321e39333f3732703d3133">[email&#160;protected]</a></p></div>
 </div></section>
 <section id="prep"><div class="sec-head"><h2>行前準備</h2>
 <p>出發前把這排勾完，右上的 <b id="prep-count">0/7</b> 會告訴你還缺什麼。</p></div>
@@ -393,6 +400,16 @@ section{padding:40px 0 6px}
     <p class="tl-note">散場後直接回飯店（Uber／地鐵）</p>
     <div class="links"><a class="mb naver " href="https://map.naver.com/p/search/%EA%B4%91%EC%95%88%EB%A6%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" target="_blank" rel="noopener">Naver 地圖 ↗</a><a class="mb gmap " href="https://www.google.com/maps/search/?api=1&amp;query=Gwangalli%20Beach%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
   </div>
+</li>
+<li class="tl">
+  <label class="ck" title="去過就打勾"><input type="checkbox" data-check="d2-night" data-kind="spot" data-day="d2"><span class="box"></span></label>
+  <div class="tl-time">00:30</div>
+  <div class="tl-body">
+    <div class="tl-head"><span class="bdg b-pink">夜店</span><h4>跨年夜續攤：범일동 Gay Bar／Club</h4></div>
+    <p class="tl-desc">廣安里倒數散場後直接殺去범일동（부산역過一站）；跨年夜是假日前夜，DACK 有開</p>
+    <p class="tl-note">四家名單與營業時間在下方「深夜俱樂部」區塊，去了哪家就打勾</p>
+    <div class="links"><a class="mb naver " href="https://map.naver.com/p/search/%EB%B2%94%EC%9D%BC%EC%97%AD" target="_blank" rel="noopener">Naver 地圖 ↗</a><a class="mb gmap " href="https://www.google.com/maps/search/?api=1&amp;query=Beomil%20Station%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+  </div>
 </li></ul>
 
 </section><section class="day" id="d3">
@@ -459,6 +476,16 @@ section{padding:40px 0 6px}
     <p class="tl-note">中區固定晚餐點</p>
     <div class="links"><a class="mb naver " href="https://map.naver.com/p/search/%EB%82%A8%ED%8F%AC%EB%8F%88%EA%B0%88%EB%B9%84" target="_blank" rel="noopener">Naver 地圖 ↗</a><a class="mb gmap " href="https://www.google.com/maps/search/?api=1&amp;query=Nampo%20Don%20Galbi%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
   </div>
+</li>
+<li class="tl">
+  <label class="ck" title="去過就打勾"><input type="checkbox" data-check="d3-night" data-kind="spot" data-day="d3"><span class="box"></span></label>
+  <div class="tl-time">23:00</div>
+  <div class="tl-body">
+    <div class="tl-head"><span class="bdg b-pink">夜店</span><h4>범일동 Gay Bar 夜戰（週五）</h4></div>
+    <p class="tl-desc">四家全開：TightHall 週五免入場費、Drag Show 在凌晨 1:00／2:30</p>
+    <p class="tl-note">名單在下方「深夜俱樂部」區塊；隔天早上不用早起，玩到幾點自己抓</p>
+    <div class="links"><a class="mb naver " href="https://map.naver.com/p/search/%EB%B2%94%EC%9D%BC%EC%97%AD" target="_blank" rel="noopener">Naver 地圖 ↗</a><a class="mb gmap " href="https://www.google.com/maps/search/?api=1&amp;query=Beomil%20Station%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+  </div>
 </li></ul>
 
 </section><section class="day" id="d4">
@@ -524,6 +551,16 @@ section{padding:40px 0 6px}
     <p class="tl-desc">晚餐／採買：百貨內用餐後回飯店</p>
     <p class="tl-note">本日晚餐固定在 Centum 處理（百貨優惠卡見下方）</p>
     <div class="links"><a class="mb naver " href="https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EC%84%BC%ED%85%80%EC%8B%9C%ED%8B%B0%EC%A0%90" target="_blank" rel="noopener">Naver 地圖 ↗</a><a class="mb gmap " href="https://www.google.com/maps/search/?api=1&amp;query=Shinsegae%20Department%20Store%20Centum%20City%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+  </div>
+</li>
+<li class="tl">
+  <label class="ck" title="去過就打勾"><input type="checkbox" data-check="d4-night" data-kind="spot" data-day="d4"><span class="box"></span></label>
+  <div class="tl-time">23:00</div>
+  <div class="tl-body">
+    <div class="tl-head"><span class="bdg b-pink">夜店</span><h4>범일동 Gay Bar 夜戰（週六）</h4></div>
+    <p class="tl-desc">DACK／TightHall／DOME／Bunker 全開，Bunker 週六是 K-pop 夜</p>
+    <p class="tl-note">名單在下方「深夜俱樂部」區塊；隔天 20:50 的飛機，節制一點</p>
+    <div class="links"><a class="mb naver " href="https://map.naver.com/p/search/%EB%B2%94%EC%9D%BC%EC%97%AD" target="_blank" rel="noopener">Naver 地圖 ↗</a><a class="mb gmap " href="https://www.google.com/maps/search/?api=1&amp;query=Beomil%20Station%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
   </div>
 </li></ul>
 <details class="fold"><summary>百貨外國人優惠卡懶人包（12/31 與 1/2、1/3 採買都用得到）</summary>
@@ -618,6 +655,41 @@ section{padding:40px 0 6px}
 <div class="alt-body"><h5>直接出發機場</h5><p>從展館拉行李出來，門口叫車直奔金海機場；約 17:40–18:00 抵達，辦登機、退稅、吃東西都不慌不忙</p>
 </div></div></div></details>
 </section>
+<section id="night"><div class="sec-head"><h2>深夜俱樂部｜23:00 後</h2>
+<p>四家都在범일동（범일역一帶，부산역過一站）。營業日多為週五・六；12/31 跨年夜是 1/1 假期前夜、DACK 有開，TightHall／DOME 建議出發前看 IG 當週公告確認。</p></div>
+<div class="night-grid"><article class="nightb">
+<label class="ck"><input type="checkbox" data-check="dack" data-kind="spot"><span class="box"></span></label>
+<span class="rec-tag">범일동・Club</span><h4>DACK BUSAN CLUB（부산댁）</h4>
+<p class="n-hours">🕒 週五・六（＋國定假日前夜）23:00–05:00</p>
+<p class="n-intro">位於범일동二樓的老字號硬派俱樂部，禁止穿拖鞋入場。跨年夜 12/31 是 1/1 假期前夜，依 IG 公告有營業。</p>
+<div class="links"><a class="mb extra" href="https://www.instagram.com/dack_busan" target="_blank" rel="noopener">IG ↗</a>
+<a class="mb naver" href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EB%8C%81" target="_blank" rel="noopener">Naver 地圖 ↗</a>
+<a class="mb gmap" href="https://www.google.com/maps/search/?api=1&amp;query=DACK%20BUSAN%20CLUB%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+</article><article class="nightb">
+<label class="ck"><input type="checkbox" data-check="tighthall" data-kind="spot"><span class="box"></span></label>
+<span class="rec-tag">범일동・Drag Bar＋Club</span><h4>TightHall（타이트홀）</h4>
+<p class="n-hours">🕒 週五・六 23:00–04:00（週五免入場費）</p>
+<p class="n-intro">Drag 秀俱樂部，週末凌晨 1:00／2:30 有秀；桌位預約走 IG DM。當地 gay 夜生活核心區的代表店。</p>
+<div class="links"><a class="mb extra" href="https://www.instagram.com/tighthall" target="_blank" rel="noopener">IG ↗</a>
+<a class="mb naver" href="https://map.naver.com/p/search/%ED%83%80%EC%9D%B4%ED%8A%B8%ED%99%80" target="_blank" rel="noopener">Naver 地圖 ↗</a>
+<a class="mb gmap" href="https://www.google.com/maps/search/?api=1&amp;query=TightHall%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+</article><article class="nightb">
+<label class="ck"><input type="checkbox" data-check="dome" data-kind="spot"><span class="box"></span></label>
+<span class="rec-tag">범일동・Club</span><h4>돔（DOME）CLUB</h4>
+<p class="n-hours">🕒 週五・六 23:00–05:00、週日 23:00–04:00</p>
+<p class="n-intro">地下大型俱樂部，連週日都開到凌晨四點；活動與桌位資訊以 IG 公告為主。</p>
+<div class="links"><a class="mb extra" href="https://www.instagram.com/dome_busan" target="_blank" rel="noopener">IG ↗</a>
+<a class="mb naver" href="https://map.naver.com/p/search/%EB%8F%94%20%ED%81%B4%EB%9F%BD%20%EB%B6%80%EC%82%B0" target="_blank" rel="noopener">Naver 地圖 ↗</a>
+<a class="mb gmap" href="https://www.google.com/maps/search/?api=1&amp;query=DOME%20Club%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+</article><article class="nightb">
+<label class="ck"><input type="checkbox" data-check="bunker" data-kind="spot"><span class="box"></span></label>
+<span class="rec-tag">범일동・Bar</span><h4>Busan Bunker（버커）</h4>
+<p class="n-hours">🕒 全週營業；週五・六改放 K-pop</p>
+<p class="n-intro">工業賽博龐克風地下酒吧，全週播放電子音樂；單獨訪客與團體都友善、深受年輕族群歡迎，適合當晚上第一攤預熱。</p>
+<div class="links"><a class="mb extra" href="https://www.instagram.com/busan_bunker/" target="_blank" rel="noopener">IG ↗</a>
+<a class="mb naver" href="https://map.naver.com/p/search/Busan%20Bunker" target="_blank" rel="noopener">Naver 地圖 ↗</a>
+<a class="mb gmap" href="https://www.google.com/maps/search/?api=1&amp;query=Busan%20Bunker%20Busan" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+</article></div></section>
 <section id="recs"><div class="sec-head"><h2>每區備選推薦</h2>
 <p>主行程沒排到的口袋名單——當天想吃別的、臨時想加景點就從這撈，去過一樣打勾。</p></div>
 <div class="filters"><input id="f-search" type="search" placeholder="搜尋地點或關鍵字…">
@@ -945,7 +1017,7 @@ section{padding:40px 0 6px}
 <p>資料來源：<a href="https://docs.google.com/spreadsheets/d/1FBJOUVdfS2bFhkpabOXxm6qLYVrJl0x9Gtxc4XhAPro/edit" target="_blank" rel="noopener">Google 試算表（釜山跨年旅行摘要）</a>｜行程若有調整，以試算表為準。</p>
 <p style="margin-top:6px">地圖連結：Naver Map 為韓國當地導航用（步行／大眾運輸較準），Google 地圖供瀏覽評論照片。少數店家若 Naver 搜尋不到，請改用該卡的 Google 連結。</p>
 </div></footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const KEY="busan_nye_2027_checks", TKEY="busan_nye_2027_theme";
 let done=new Set(JSON.parse(localStorage.getItem(KEY)||"[]"));
@@ -991,4 +1063,5 @@ function cd(){const now=Date.now(),el=$("#cd");
   else{el.textContent="釜山跨年 2027　旅途圓滿";}}
 cd();setInterval(cd,1000);
 syncBoxes();refresh();applyF();
-</script></body></html>
+</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body></html>
